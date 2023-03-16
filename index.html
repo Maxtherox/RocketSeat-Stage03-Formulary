@@ -25,7 +25,7 @@
             formulário de inscrição.
         </p>
     </header>
-        <form action="">
+        <form id="my-form" action="">
             <fieldset>
 
                 <div class="fieldset-wrapper">
@@ -35,7 +35,8 @@
     
                     <div class="input-wrapper">
                         <label for="event-tittle">Titulo do evento <span>(Mínimo 8 caracteres)</span></label>
-                        <input type="text" id="event-title"/>
+                        <input type="text" id="event-title" required minlength="8"/>
+
                     </div>
                     
     
@@ -82,12 +83,12 @@
                     
                     <div class="input-wrapper">
                         <label for="event-email">E-mail do administrador <span>(Digite um E-mail valido)</span></label>
-                        <input type="email" id="event-email"/>
+                        <input type="email" id="event-email" required/>
                     </div>
                     
                     <div class="input-wrapper">
                         <label for="event-password">Senha de acesso para os participantes <span>(Mínimo 8 caracteres)</span></label>
-                        <input type="password" id="event-password"/>
+                        <input type="password" id="event-password" required minlength="8"/>
                     </div>
 
                     <div class="checkbox-wrapper">
@@ -121,18 +122,14 @@
                             <label for="event-end">Até</span></label>
                             <input type="time" id="event-end"/>
                         </div>
-
                     </div>
-
-                   
-
-                    
-
                 </div>
             </fieldset>
-            
-        </form>
-
+        
+         </form>
+            <footer>
+                 <input class="button" type="submit" form="my-form" value="Salvar Evento">
+            </footer>
     </div>
 </body>
 </html>
